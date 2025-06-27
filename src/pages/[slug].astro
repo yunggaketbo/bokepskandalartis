@@ -127,8 +127,8 @@ randomVideos.forEach(v => {
 const preconnectDomains = Array.from(allDomains);
 
 const breadcrumbs = [
-  { name: 'Home', url: '/' },
-  { name: video.category, url: `/category/${slugify(video.category)}/1` },
+  { name: 'Home', url: `${url}` },
+  { name: video.category, url: `${url}/category/${slugify(video.category)}/1` },
   { name: video.title },
 ];
 
