@@ -198,16 +198,15 @@ const schemaBreadcrumb = {
     <nav class="breadcrumb" aria-label="breadcrumb">
       <ol>
         {breadcrumbs.map((item, index) => (
-          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <li>
             {index > 0 && <span class="separator">/</span>}
             {item.url ? (
-              <a itemprop="item" href={item.url}>
-                <span itemprop="name">{item.name}</span>
+              <a href={item.url}>
+                <span >{item.name}</span>
               </a>
             ) : (
-              <span itemprop="name">{item.name}</span>
+              <span >{item.name}</span>
             )}
-            <meta itemprop="position" content={(index + 1).toString()} />
           </li>
         ))}
       </ol>
